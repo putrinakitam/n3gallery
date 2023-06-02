@@ -4,7 +4,7 @@
 package projekoop;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
+// import javafx.event.ActionEvent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import projekoop.scenes.StartScene;
@@ -13,11 +13,12 @@ import javafx.scene.text.Font;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+// import javafx.scene.control.TextField;
 
 
 public class App extends Application{
    
+    
     public static void main(String[] args) {
         Application.launch(args);
     }
@@ -25,15 +26,23 @@ public class App extends Application{
     @Override
     public void start(Stage stage) throws Exception{
 
-        Button buttonStart = new Button("MULAI");
+        Label tittle = new Label("WELCOME N3 GALLERY");
+        tittle.setFont(new Font("Arial", 50));
+
+        Button buttonStart = new Button("SHOP NOW");
         buttonStart.setMaxSize(100, 200);
         buttonStart.setAlignment(Pos.CENTER);
-        buttonStart.setOnAction(V -> {
+        buttonStart.setStyle("-fx-background-color: #105a86; -fx-cursor:hand;");
+        buttonStart.setOnAction(v -> {
             StartScene startScene = new StartScene(stage);
             startScene.show();
         });
-        
-        Label tittle = new Label("N3 GALLERY");
+        buttonStart.setOnMouseEntered(V -> {
+            buttonStart.setStyle("-fx-background-color: #000000; -fx-cursor:hand;");
+        });
+        buttonStart.setOnMouseExited(V ->{
+            buttonStart.setStyle("-fx-background-color: #105a86; -fx-cursor:hand;");
+        });
         
         VBox vbox = new VBox();
         tittle.setFont(Font.font("Arial",20));
@@ -41,14 +50,16 @@ public class App extends Application{
         vbox.getChildren().add(buttonStart);
         vbox.setSpacing(12.0);
         vbox.setAlignment(Pos.CENTER);
-                
-        
-        Scene scene = new Scene(vbox, 320,512);
+        vbox.setStyle("-fx-background-color: #FFFFFF;");
+
+        //buat layout
+        Scene scene = new Scene(vbox, 400,600);
         stage.setScene(scene);
         stage.setTitle("N3 Gallery");
         stage.show();
     }
 
-    
-
+    public Object getGreeting() {
+        return null;
+    }
 }
