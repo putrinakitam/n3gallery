@@ -29,14 +29,14 @@ public class SamsungScene {
         //samsung23plus
         Image samsung23PlusImage = new Image("/image/samsung23plus.png");
         ImageView samsung23PlusIV = new ImageView(samsung23PlusImage);
-        samsung23PlusIV.setFitHeight(120);
-        samsung23PlusIV.setFitWidth(90);
-        // samsung23PlusIV.setOnMouseClicked(v ->{
-        //     Samsungs23plus s23 = new Samsungs23plus(stage);
-        //     s23.show();
-        // });
+        samsung23PlusIV.setFitWidth(120);
+        samsung23PlusIV.setFitHeight(150);
+        samsung23PlusIV.setOnMouseEntered(V ->{
+            samsung23PlusIV.setStyle("-fx-cursor: hand;");
+        });
+
         Label nama1 = new Label("SAMSUNG S23 Plus");
-        nama1.setFont(new Font("Hey Comic", 10));
+        nama1.setFont(new Font("Hey Comic", 12));
 
         VBox hp1 = new VBox();
         hp1.setAlignment(Pos.TOP_CENTER);
@@ -45,11 +45,14 @@ public class SamsungScene {
         //samsung23ultra
         Image samsung23UltraImage = new Image("/image/samsung23ultra.png");
         ImageView samsung23UltraIV = new ImageView(samsung23UltraImage);
-        samsung23UltraIV.setFitHeight(120);
-        samsung23UltraIV.setFitWidth(90);
+        samsung23UltraIV.setFitWidth(120);
+        samsung23UltraIV.setFitHeight(150);
+        samsung23UltraIV.setOnMouseEntered(V ->{
+            samsung23UltraIV.setStyle("-fx-cursor: hand;");
+        });
 
         Label nama2 = new Label("SAMSUNG S23 Ultra IV");
-        nama2.setFont(new Font("Hey Comic", 10));
+        nama2.setFont(new Font("Hey Comic", 12));
         VBox hp2 = new VBox();
         hp2.setAlignment(Pos.TOP_CENTER);
         hp2.getChildren().addAll(samsung23UltraIV,nama2);
@@ -62,23 +65,29 @@ public class SamsungScene {
         //samsung22plus
         Image samsung22PlusImage = new Image("/image/samsungFoldd.png");
         ImageView samsung22PlusIV = new ImageView(samsung22PlusImage);
-        samsung22PlusIV.setFitHeight(120);
-        samsung22PlusIV.setFitWidth(90);
+        samsung22PlusIV.setFitWidth(120);
+        samsung22PlusIV.setFitHeight(150);
+        samsung22PlusIV.setOnMouseEntered(V ->{
+            samsung22PlusIV.setStyle("-fx-cursor: hand;");
+        });
 
         Label nama3 = new Label("SAMSUNG S22 Plus");
-        nama3.setFont(new Font("Hey Comic", 10));
+        nama3.setFont(new Font("Hey Comic", 12));
         VBox hp3 = new VBox();
         hp3.getChildren().addAll(samsung22PlusIV,nama3);
         hp3.setAlignment(Pos.TOP_CENTER);
-
+        
         //samsungFlip
         Image samsungFlipImage = new Image("/image/samsungFlippp.png");
         ImageView samsungFlip = new ImageView(samsungFlipImage);
-        samsungFlip.setFitHeight(120);
-        samsungFlip.setFitWidth(90);
+        samsungFlip.setFitWidth(120);
+        samsungFlip.setFitHeight(150);
+        samsungFlip.setOnMouseEntered(V ->{
+            samsungFlip.setStyle("-fx-cursor: hand;");
+        });;
 
         Label nama4 = new Label("SAMSUNG FLIP");
-        nama4.setFont(new Font("Hey Comic", 10));
+        nama4.setFont(new Font("Hey Comic", 12));
         VBox hp4 = new VBox();
         hp4.setAlignment(Pos.TOP_CENTER);
         hp4.getChildren().addAll(samsungFlip,nama4);
@@ -105,7 +114,7 @@ public class SamsungScene {
         // vbox pemanggilan
         VBox layout = new VBox();
         layout.getChildren().addAll(samsungLabel,duaHp,empatHp,backButton);
-        layout.setAlignment(Pos.TOP_CENTER);
+        layout.setAlignment(Pos.CENTER);
         layout.setSpacing(20);
         
         Scene scene = new Scene(layout, 400, 600);

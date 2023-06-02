@@ -32,16 +32,16 @@ public class App extends Application{
         Button buttonStart = new Button("SHOP NOW");
         buttonStart.setMaxSize(100, 200);
         buttonStart.setAlignment(Pos.CENTER);
-        buttonStart.setStyle("-fx-background-color: #105a86; -fx-cursor:hand;");
+        buttonStart.setStyle("-fx-background-color: #000000; -fx-cursor:hand; -fx-text-fill: white;");
         buttonStart.setOnAction(v -> {
             StartScene startScene = new StartScene(stage);
             startScene.show();
         });
         buttonStart.setOnMouseEntered(V -> {
-            buttonStart.setStyle("-fx-background-color: #000000; -fx-cursor:hand;");
+            buttonStart.setStyle("-fx-background-color: red; -fx-cursor:hand; -fx-text-fill: white;");
         });
         buttonStart.setOnMouseExited(V ->{
-            buttonStart.setStyle("-fx-background-color: #105a86; -fx-cursor:hand;");
+            buttonStart.setStyle("-fx-background-color: #000000; -fx-cursor:hand; -fx-text-fill: white;");
         });
         
         VBox vbox = new VBox();

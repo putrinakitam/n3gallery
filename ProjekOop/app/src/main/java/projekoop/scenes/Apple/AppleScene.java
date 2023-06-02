@@ -26,11 +26,11 @@ public class AppleScene {
         appleLabel.setText("APPLE");
         appleLabel.setFont(new Font("Cooper Black", 20));
 
-        //iphone14
+        //iphone14promax
         Image ip14PromaxImage = new Image("/image/ip14promax.png");
         ImageView ip14PromaxIV = new ImageView(ip14PromaxImage);
-        ip14PromaxIV.setFitWidth(80);
-        ip14PromaxIV.setFitHeight(105);
+        ip14PromaxIV.setFitWidth(120);
+        ip14PromaxIV.setFitHeight(150);
         ip14PromaxIV.setOnMouseClicked(V ->{
             Ip14Promax promax = new Ip14Promax(stage);
             promax.show();
@@ -40,7 +40,7 @@ public class AppleScene {
         });
     
         Label nama1 = new Label("IPHONE 14 PRO MAX");
-        nama1.setFont(new Font("Hey Comic", 10));
+        nama1.setFont(new Font("Hey Comic", 12));
 
         VBox hp1 = new VBox();
         hp1.setAlignment(Pos.TOP_CENTER);
@@ -49,8 +49,8 @@ public class AppleScene {
         //ip13PROMAX
         Image ip13ProMax = new Image("/image/ip13promax.png");
         ImageView imageView2 = new ImageView(ip13ProMax);
-        imageView2.setFitWidth(80);
-        imageView2.setFitHeight(105);
+        imageView2.setFitWidth(120);
+        imageView2.setFitHeight(150);
         imageView2.setOnMouseClicked(V ->{
             Ip13Promax promax = new Ip13Promax(stage);
             promax.show();
@@ -60,43 +60,59 @@ public class AppleScene {
         });
 
         Label nama2 = new Label("IPHONE 13 PRO MAX");
-        nama2.setFont(new Font("Hey Comic", 10));
+        nama2.setFont(new Font("Hey Comic", 12));
  
         VBox hp2 = new VBox();
         hp2.setAlignment(Pos.TOP_CENTER);
         hp2.getChildren().addAll(imageView2,nama2);
 
+        //hbox gabungan
         HBox urut1 = new HBox();
         urut1.setAlignment(Pos.CENTER);
         urut1.setSpacing(20);
         urut1.getChildren().addAll(hp1,hp2);
 
         //ip12promax
-        Image ip14pro = new Image("/image/ip12promax.png");
-        ImageView imageView3 = new ImageView(ip14pro);
-        imageView3.setFitWidth(80);
-        imageView3.setFitHeight(105);
+        Image ip12ProMax = new Image("/image/ip12promax.png");
+        ImageView imageView3 = new ImageView(ip12ProMax);
+        imageView3.setFitWidth(120);
+        imageView3.setFitHeight(150);
+        imageView3.setOnMouseClicked(V ->{
+            Ip12Promax pro12max = new Ip12Promax(stage);
+            pro12max.show();
+        });
+        imageView3.setOnMouseEntered(V ->{
+            imageView3.setStyle("-fx-cursor: hand;");
+        });
 
         Label nama3 = new Label("IPHONE 12 PRO MAX");
-        nama3.setFont(new Font("Hey Comic", 10));
+        nama3.setFont(new Font("Hey Comic", 12));
 
         VBox hp3 = new VBox(0);
         hp3.setAlignment(Pos.TOP_CENTER);
         hp3.getChildren().addAll(imageView3,nama3);  
 
-        //ip13promax
-        Image ip13pro = new Image("/image/ip14plus.png");
-        ImageView imageView4 = new ImageView(ip13pro);
-        imageView4.setFitWidth(80);
-        imageView4.setFitHeight(105);
+        //ip14plus
+        Image ip14Plus = new Image("/image/ip14plus.png");
+        ImageView imageView4 = new ImageView(ip14Plus);
+        imageView4.setFitWidth(120);
+        imageView4.setFitHeight(150);
+        imageView4.setOnMouseClicked(V ->{
+            Ip14Plus ip14PlusButton = new Ip14Plus(stage);
+            ip14PlusButton.show();
+        });
+        imageView4.setOnMouseEntered(V ->{
+            imageView4.setStyle("-fx-cursor: hand;");
+        });
 
         Label nama4 = new Label("IPHONE 14 PLUS");
-        nama4.setFont(new Font("Hey Comic", 10));
+        nama4.setFont(new Font("Hey Comic", 12));
 
         VBox hp4 = new VBox(0);
         hp4.setAlignment(Pos.TOP_CENTER);
         hp4.getChildren().addAll(imageView4,nama4); 
         
+        //hbox gabungan
         HBox urut2 = new HBox();
         urut2.setAlignment(Pos.CENTER);
         urut2.setSpacing(20);
@@ -115,7 +131,7 @@ public class AppleScene {
 
         //vbox pemanggilan
         VBox layout = new VBox();
-        layout.getChildren().addAll(urut1,urut2,buttonBack);
+        layout.getChildren().addAll(appleLabel,urut1,urut2,buttonBack);
         layout.setAlignment(Pos.CENTER);
         layout.setSpacing(20);
 
