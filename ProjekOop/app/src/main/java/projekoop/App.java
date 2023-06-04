@@ -8,12 +8,15 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import projekoop.scenes.StartScene;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 // import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 
 
 public class App extends Application{
@@ -26,8 +29,8 @@ public class App extends Application{
     @Override
     public void start(Stage stage) throws Exception{
 
-        Label tittle = new Label("WELCOME N3 GALLERY");
-        tittle.setFont(new Font("Arial", 50));
+        // Label tittle = new Label("WELCOME N3 GALLERY");
+        // tittle.setFont(new Font("Arial", 50));
 
         Button buttonStart = new Button("SHOP NOW");
         buttonStart.setMaxSize(100, 200);
@@ -45,15 +48,22 @@ public class App extends Application{
         });
         
         VBox vbox = new VBox();
-        tittle.setFont(Font.font("Arial",20));
-        vbox.getChildren().add(tittle);
+        // tittle.setFont(Font.font("Arial",20));
+        // vbox.getChildren().add(tittle);
         vbox.getChildren().add(buttonStart);
+        vbox.setPadding(new Insets(70, 0, 0, 0));
         vbox.setSpacing(12.0);
         vbox.setAlignment(Pos.CENTER);
-        vbox.setStyle("-fx-background-color: #FFFFFF;");
+        // vbox.setStyle("-fx-background-color: #FFFFFF;");
+
+
+        ImageView bg = new ImageView("/image/bgbgbg.png");
+        bg.setFitHeight(600);
+        bg.setFitWidth(400);
+        StackPane stackPane = new StackPane(bg,vbox);
 
         //buat layout
-        Scene scene = new Scene(vbox, 400,600);
+        Scene scene = new Scene(stackPane, 400,600);
         stage.setScene(scene);
         stage.setTitle("N3 Gallery");
         stage.show();
